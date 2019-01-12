@@ -21,7 +21,8 @@ window.onload = function() {
     Http.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             var obj = JSON.parse(Http.responseText);
-            console.log(obj.length);
+            obj.unshift(JSON.parse('{ "name": "beta"}'));
+            obj.unshift(JSON.parse('{ "name": "Empty"}'));
             for (var i = 0; i < obj.length; i++) {
                 var version = obj[i]['name'];
                 var option = document.createElement('option');
@@ -81,7 +82,7 @@ function parseInput(str) {
 
 function loadSim(index, game, version) {
     var sim = document.getElementById('sim' + index);
-    if (version === '' || game === '') {
+    if (version === '' || game === '' || version === 'Empty') {
         sim.innerHTML = '';
     } else {
         sim.innerHTML = '<div style="position:relative;height:0;padding-bottom:117.6%;overflow:hidden;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;" src="https://arcade.makecode.com/' + version + '---run?id=' + game + '" allowfullscreen="allowfullscreen" sandbox="allow-popups allow-forms allow-scripts allow-same-origin" frameborder="0"></iframe></div>'
