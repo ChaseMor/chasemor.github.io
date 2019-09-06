@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
   <!-- Site Properties -->
-  <title>Chase Mortensen</title>
+  <title>Posts</title>
   <link rel="stylesheet" type="text/css" href="./semantic/components/reset.css">
   <link rel="stylesheet" type="text/css" href="./semantic/components/site.css">
 
@@ -31,6 +31,13 @@
 
   <style type="text/css">
 
+    body.pushable {
+      background-color: #004F91 !important;
+    }
+
+    .pushable > .pusher {
+      min-height: 0 !important;
+    }
     .hidden.menu {
       display: none;
     }
@@ -167,11 +174,12 @@
       float: none;
     }
 
+    img.pixelated {
+      image-rendering: pixelated;
+    }
+
     @media only screen and (max-width: 700px) {
-      .ui.fixed.menu {
-        display: none !important;
-      }
-      .secondary.pointing.menu .item,
+      /*.secondary.pointing.menu .item,
       .secondary.pointing.menu .menu {
         display: none;
       }
@@ -188,7 +196,7 @@
       .masthead h2 {
         margin-top: 0.5em;
         font-size: 1.5em;
-      }
+      }*/
 
     }
 
@@ -228,13 +236,13 @@
 <body>
 
 <!-- Following Menu -->
-<div class="ui large top fixed hidden menu">
+<div class="ui large top fixed menu">
   <div class="ui container">
-    <a href="index.html" class="active item">Home</a>
+    <a href="index.html" class="item">Home</a>
     <a href="about.html" class="item">About Me</a>
     <a href="resume.html" class="item">Resume</a>
     <a href="projects.html" class="item">Projects</a>
-    <a href="posts.html" class="item">Posts</a>
+    <a href="posts.html" class="active item">Posts</a>
     <div class="right item social">
       <a href="https://linkedin.com/chase-mortensen" title="Connect with me on LinkedIn" class="ui"><i class="icon linkedin"></i></a>
       <a href="https://github.com/chasemor" title="Critique my code on GitHub" class="ui"><i class="icon github"></i></a>
@@ -245,118 +253,40 @@
 
 <!-- Sidebar Menu -->
 <div class="ui vertical inverted sidebar menu">
-    <a href="index.html" class="active item">Home</a>
+    <a href="index.html" class="item">Home</a>
     <a href="about.html" class="item">About Me</a>
     <a href="resume.html" class="item">Resume</a>
     <a href="projects.html" class="item">Projects</a>
-    <a href="posts.html" class="item">Posts</a>
+    <a href="posts.html" class="active item">Posts</a>
 </div>
 
 
 <!-- Page Contents -->
 <div class="pusher">
-  <div class="ui inverted vertical masthead center aligned segment">
-
-    <div class="ui container">
-      <div class="ui large secondary inverted pointing menu">
-        <a class="toc item">
-          <i class="sidebar icon"></i>
-        </a>
-        <a href="index.html" class="active item">Home</a>
-        <a href="about.html" class="item">About Me</a>
-        <a href="resume.html" class="item">Resume</a>
-        <a href="projects.html" class="item">Projects</a>
-        <a href="posts.html" class="item">Posts</a>
-        <div class="right item social">
-          <a href="https://linkedin.com/chase-mortensen" title="Connect with me on LinkedIn" class="ui"><i class="icon linkedin"></i></a>
-          <a href="https://github.com/chasemor" title="Critique my code on GitHib" class="ui"><i class="icon github"></i></a>
-          <a href="https://twitter.com/Real_Chase_Bank" title="Follow me on Twitter" class="ui"><i class="icon twitter"></i></a>
-        </div>
-      </div>
-    </div>
-
-    <div class="ui text container">
-      <h1 class="ui inverted header">
-        Chase Mortensen
-      </h1>
-      <h2>Software Developer</h2>
-    </div>
-
-  </div>
-
   <div class="ui vertical stripe segment">
-    <div class="ui middle aligned stackable grid container centered">
-      <div class="row">
-        <div class="twelve wide column">
-          <h1 class="ui header centered">Welcome!</h1>
-          <p>Hey there! I'm Chase! Welcome to my webpage! This is where I hope to post things about me, some of the projects I'm working on, as well as perhaps some helpful posts.😊</p>
+    <div class="ui grid container centered">
+        <div class="ten wide column">
+            <h1 class="ui header centered">Oh No!</h1>
+            <img class="ui image centered medium pixelated" src="assets/images/sad-face.png">
+            <p>
+              It looks like I haven't uploaded any posts yet. Don't worry, once I get the site more flushed out I'll upload some content.
+            </p>
         </div>
-      </div>
     </div>
   </div>
   
-  <div class="ui vertical stripe segment">
-    <div class="ui middle aligned stackable grid container centered">
-      <div class="row">
-        <div class="twelve wide column">
-          <h2 class="ui header centered">Social Media!</h2>
-          <p>Here is some of my social media. Feel free connect with me and follow me to see what I get up to.</p>
-          <div class="ui link cards centered wide column">
-            <a href="https://linkedin.com/chase-mortensen">
-              <div class="ui card">
-                <div class="icon">
-                  <i class="icon linkedin"></i>
-                </div>
-                <div class="content">
-                  <div class="header">LinkedIn</div>
-                  <div class="description">
-                      Connect with me on LinkedIn
-                  </div>
-                </div>
-              </div>
-            </a>
-            <a href="https://github.com/chasemor">
-              <div class="ui card">
-                  <div class="icon">
-                    <i class="icon github"></i>
-                  </div>
-                  <div class="content">
-                    <div class="header">GitHub</div>
-                    <div class="description">
-                      Critique my code on GitHub
-                    </div>
-                  </div>
-              </div>
-            </a>
-            <a href="https://twitter.com/Real_Chase_Bank">
-              <div class="ui card">
-                <div class="icon">
-                  <i class="icon twitter"></i>
-                </div>
-                <div class="content">
-                  <div class="header">Twitter</div>
-                  <div class="description">
-                    Follow me on Twitter
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  
   <div class="ui inverted vertical footer segment">
     <div class="ui container">
       <div class="ui stackable inverted divided equal height stackable grid">
         <div class="three wide column">
           <h4 class="ui inverted header">Sitemap</h4>
           <div class="ui inverted link list">
-              <a href="index.html" class="active item">Home</a>
+              <a href="index.html" class="item">Home</a>
               <a href="about.html" class="item">About Me</a>
               <a href="resume.html" class="item">Resume</a>
               <a href="projects.html" class="item">Projects</a>
-              <a href="posts.html" class="item">Posts</a>
+              <a href="posts.html" class="active item">Posts</a>
           </div>
         </div>
         <div class="three wide column">
